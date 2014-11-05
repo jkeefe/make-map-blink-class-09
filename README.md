@@ -119,4 +119,41 @@ Go back to your browser with the "Hello, world." page and open the "console." Wh
 
 There's the console!
 
+Reload that page, and you should see something appear in the console. It should be the weather data, tho you may have to click arrows to see it all.
 
+##Extracting the temperatures
+
+Ok, back to `myproject.js`.
+
+We are going to pull the temperatures out of the data and put them into an array. That's a collection of numbers surrounded by [brackets] like this: 
+
+	[7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
+	
+You may remember, that's how Highcharts likes it's data.
+
+Right under where you had `console.log(weather);` we'll make a blank array called temps:
+
+	var temps = [];
+	
+Great. Now we need a little bit of code that yanks each of the temperatures out of the weather data and "pushes" them into the array. The temperatures are actually nested in the data a few levels down. So they're at weather.hourly.data. This will get them all and make them one array: 
+
+	  weather.hourly.data.forEach(function(hour, i){
+
+		  temps.push(hour.temperature);
+
+	  });
+
+Great. Almost there.
+
+##Building the chart
+
+We need the base Highcharts code, so ...
+
+- Go to the [Highcharts Demo Page](http://www.highcharts.com/demo)
+- You'll be looking at the Basic Line chart
+- Click "View options"
+- Copy the code in the popup box
+
+Now go to your `myproject.js` file and pase that code right below the `});` that comes after `temps.push(hour.temperature);`
+
+(To be continued)

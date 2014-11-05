@@ -37,7 +37,7 @@ It's blank! Let's change that.
 	<html>
 	</html>
 	
-- OK, now we need two more sections *between* those two tags: head and body:
+OK, now we need two more sections *between* those two tags: head and body:
 
 	<html>
 	
@@ -49,13 +49,13 @@ It's blank! Let's change that.
 	
 	</html>
 
-- Now, let's just test this out. Put 'Hello, world!' between the body tags.
+Now, let's just test this out. Put 'Hello, world!' between the body tags.
 
 	<body>
 	Hello, world!
 	</body>
 	
-- Drag the whole index.html into a browser window.
+Drag the whole index.html into a browser window.
 
 If you see `Hello, world!` you're good!
 
